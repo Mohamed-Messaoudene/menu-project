@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+body{
+    height: 100vh;
+    background-color: hsl(210, 36%, 96%);
+}
+.title{
+    width: 100%;
+    height: 160px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+.title h1{
+    font-weight: bolder;
+    font-size: clamp(27px,6vw,40px);
+    color: rgb(226, 162, 24);
+    span{
+        color: #cab330;
+    }
+}
+.title nav{ 
+    width: clamp(150px,40%,60vw);
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;  
+}
+ nav button{
+    padding: 0 15px;
+    width: fit-content;
+    height: 33px;
+    border: 2px solid #dbd80c;
+    border-radius: 7px;
+    color: #dbd80c;
+    font-size: clamp(12px,5vw,17px);
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover ,.active{
+    color: #d89925;
+    border-color: #c98c32;
+}
+
+section{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    padding-top: 30px;
+    gap: 2rem 2rem;
+}
+section .item_container{
+   width:max(45%,330px);
+   height: clamp(150px,25vh,240px);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+.image{
+    width: 46%;  
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgb(236, 116, 3);
+    border-radius: 8px;
+}
+.item_container .info{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.info .mainInfo{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    border-bottom: 1px dotted rgb(236, 116, 3);
+}
+.mainInfo h3{
+    font-size: clamp(10px, 1.5vw, 17px);
+    padding-left: 3px;
+    color: blue;
+}
+.mainInfo .price{
+    font-size:clamp(11px, 1.5vw, 22px);
+    font-weight: 500;
+    color: #e49219;
+}
+.info .more{
+    font-size:clamp(12px, 1.5vw, 17px) ;
+    padding: 15px 0px 0 12px;
+    line-height: 150%;
+    color: black;
+}
+@media screen and (max-width:750px) {       
+    section{
+        width: 80%;
+    }
+    section .item_container{
+       width:max(80%,540px);
+       height: clamp(150px,20vh,240px);
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+    .image{
+        width: 46%;  
+    }
+    .image img{
+        border: 4px solid rgb(236, 116, 3);
+    } 
+    nav button{
+        padding: 0 10px;
+        font-size: clamp(13px,1vw,17px);
+    } 
+}
+@media screen and (max-width:400px){
+    section{
+        width: 70%;
+    }
+    section .item_container{
+       
+       height: fit-content;
+       flex-direction: column-reverse;
+    }
+    .image{
+        width: 100%;  
+    }
+    .item_container .info{
+        width:100%;
+        padding-bottom: 12px;
+    }
+    .info .more{
+        font-size:clamp(10px, 1.5vw, 18px) ;
+    }
+    nav button{
+        padding: 0 5px;
+        font-size: clamp(10px,1vw,17px);
+    }
+    .title nav{
+        flex-wrap: wrap;
+
+    }
+}
+
